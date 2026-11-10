@@ -1,0 +1,133 @@
+[1] "======================================================="
+[1] "Table 4 block: D-A q = 0"
+[1] "1/t*: 0.987"
+# A tibble: 4 × 2
+  point weight
+  <int>  <dbl>
+1     1  0.382
+2    16  0.114
+3    17  0.148
+4    61  0.356
+[1] "-- Fixed n (Algorithm I + modified Step II) --"
+[1] "n = 10 MinEff = 0.959"
+        [,1] [,2] [,3] [,4] [,5]
+x          1   15   16   17   61
+n_prime    4    1    1    1    3
+[1] "Delta matrix:"
+        [,1] [,2]
+x          1   15
+Delta_n    1    1
+[1] "Eff by criterion: D 0.989, A 0.959"
+[1] "n = 25 MinEff = 0.977"
+        [,1] [,2] [,3] [,4]
+x          1   16   17   61
+n_prime   10    2    4    9
+[1] "Delta matrix:"
+        [,1] [,2] [,3]
+x          1   17   61
+Delta_n    1    1    1
+[1] "Eff by criterion: D 0.977, A 0.996"
+[1] "n = 50 MinEff = 0.986"
+        [,1] [,2] [,3] [,4]
+x          1   16   17   61
+n_prime   19    5    8   18
+[1] "Delta matrix:"
+        [,1] [,2]
+x         17   61
+Delta_n    1    1
+[1] "Eff by criterion: D 0.986, A 0.988"
+[1] "======================================================="
+[1] "Table 4 block: D-A-Ds q = 0"
+[1] "1/t*: 0.842"
+# A tibble: 4 × 2
+  point weight
+  <int>  <dbl>
+1     1  0.288
+2    15  0.246
+3    16  0.179
+4    61  0.286
+[1] "-- Fixed n (Algorithm I + modified Step II) --"
+[1] "n = 10 MinEff = 0.809"
+        [,1] [,2] [,3] [,4]
+x          1   15   16   61
+n_prime    3    3    1    3
+[1] "Delta matrix:"
+        [,1] [,2] [,3]
+x          1   15   61
+Delta_n    1    1    1
+[1] "Eff by criterion: D 0.988, A 0.870, Ds 0.809"
+[1] "n = 25 MinEff = 0.825"
+        [,1] [,2] [,3] [,4] [,5]
+x          1   15   16   17   61
+n_prime    7    6    4    1    7
+[1] "Delta matrix:"
+        [,1]
+x         17
+Delta_n    1
+[1] "Eff by criterion: D 0.975, A 0.825, Ds 0.859"
+[1] "n = 50 MinEff = 0.838"
+        [,1] [,2] [,3] [,4]
+x          1   15   16   61
+n_prime   14   13    8   15
+[1] "Delta matrix:"
+        [,1] [,2]
+x         15   61
+Delta_n    1    1
+[1] "Eff by criterion: D 0.982, A 0.844, Ds 0.838"
+[1] "======================================================="
+[1] "Table 4 block: D-A q = 0.2"
+[1] "1/t*: 0.949"
+# A tibble: 3 × 2
+  point weight
+  <int>  <dbl>
+1     1  0.258
+2    10  0.248
+3    61  0.494
+[1] "-- Fixed C (Algorithm II + modified Step II) --"
+[1] "C = 100 MinEff = 0.932 C_remaining = 13.600"
+        [,1] [,2] [,3] [,4]
+x          1   10   59   61
+n_prime   26    8    1    3
+[1] "Delta matrix:"
+        [,1] [,2]
+x          1   59
+Delta_n    1    1
+[1] "Eff by criterion: D 0.932, A 0.961"
+[1] "C = 500 MinEff = 0.948 C_remaining = 13.800"
+        [,1] [,2] [,3] [,4]
+x          1   10   60   61
+n_prime  130   44    1   18
+[1] "Delta matrix:"
+        [,1] [,2]
+x          1   60
+Delta_n    1    1
+[1] "Eff by criterion: D 0.949, A 0.948"
+[1] "======================================================="
+[1] "Table 4 block: D-A-Ds q = 0.2"
+[1] "1/t*: 0.864"
+# A tibble: 3 × 2
+  point weight
+  <int>  <dbl>
+1     1  0.156
+2    10  0.377
+3    61  0.467
+[1] "-- Fixed C (Algorithm II + modified Step II) --"
+[1] "C = 100 MinEff = 0.818 C_remaining = 9.600"
+        [,1] [,2] [,3]
+x          1   10   61
+n_prime   24   13    3
+[1] "Delta matrix:"
+        [,1]
+x          1
+Delta_n    9
+[1] "Eff by criterion: D 0.973, A 0.818, Ds 0.828"
+[1] "C = 500 MinEff = 0.861 C_remaining = 13.400"
+        [,1] [,2] [,3]
+x          1   10   61
+n_prime   78   67   18
+[1] "Delta matrix:"
+        [,1]
+x         61
+Delta_n    1
+[1] "Eff by criterion: D 0.904, A 0.866, Ds 0.861"
+[1] "Done: Table 4 main table reproduction."

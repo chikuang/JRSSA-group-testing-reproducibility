@@ -1,0 +1,8 @@
+[1] "E-optimal approximate design (pool size, weight):"
+  point    weight
+1     1 0.4145633
+2    16 0.2504655
+3    61 0.3349712
+[1] "Loss value = -lambda_min(M): -2.3599532"
+[1] "lambda_min(M) at optimum: 2.3599532"
+[1] "Solver status: optimal"

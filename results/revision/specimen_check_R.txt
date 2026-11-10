@@ -1,0 +1,2 @@
+Specimen-cap D efficiency of displayed allocation: 0.999999487596559
+D benchmark relative directional residual: 7.41107776502936e-06

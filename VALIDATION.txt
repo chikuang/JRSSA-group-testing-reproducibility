@@ -1,0 +1,17 @@
+Validation completed 2026-11-10
+
+- All 17 original inst/ files match upstream SHA-256 inventory.
+- All 13 R entry scripts executed via scripts/run_original.R.
+  The incomplete trailing Stage II plot is documented in README; its complete
+  scenario calculations and preceding plots are retained.
+- Revised rounding, resource bounds and Stage II checks executed successfully.
+- Packaged run.R bias 10000 4 executed end to end: 120000 joint MLE fits.
+- The packaged rerun summary is byte-identical to the development run.
+- Every implemented design spends the budget exactly and has rank-three information.
+- All estimates, including boundary estimates and numerical termination flags, retained.
+- Numerical score checks, expanded starts, and independent profile likelihood audit passed.
+- Empirical MSE decomposition verified to numerical precision.
+- Two-size identical-distribution example verified to 2.3e-16.
+- Positive finite-sample bias example checked by exact binomial summation.
+- Same-budget three-size/four-size information comparison recalculated in R.
+- Dependency versions and session information are supplied.

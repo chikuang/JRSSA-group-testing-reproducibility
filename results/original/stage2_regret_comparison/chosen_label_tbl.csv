@@ -1,0 +1,21 @@
+"label","k","y","label_text","x_plot"
+"Bad 14: p0 very high",3,5475.2227,"Bad 14: p0 very high
+k = 3",2.82
+"Bad 23: high p0 high Se/Sp",3,5475.2227,"Bad 23: high p0 high Se/Sp
+k = 3",3.18
+"Bad 2: mild p0 only",4,5142.337111,"Bad 2: mild p0 only
+k = 4",3.82
+"Bad 5: moderate joint",4,5142.337111,"Bad 5: moderate joint
+k = 4",3.94
+"Bad 9: severe joint",4,5142.337111,"Bad 9: severe joint
+k = 4",4.06
+"Bad 10: high Sp",4,5142.337111,"Bad 10: high Sp
+k = 4",4.18
+"True theta",5,5108.37351323,"True theta
+k = 5",4.82
+"Bad 20: low p0 high Se/Sp",6,5208.7873673039,"Bad 20: low p0 high Se/Sp
+k = 6",5.82
+"Bad 13: p0 far too low",8,5569.72189398115,"Bad 13: p0 far too low
+k = 8",7.82
+"Bad 22: low p0 low Se/Sp",8,5569.72189398115,"Bad 22: low p0 low Se/Sp
+k = 8",8.18

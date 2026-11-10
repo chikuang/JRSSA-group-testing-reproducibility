@@ -1,0 +1,2 @@
+SE lower bounds: 0.161725318819024, 0.171983343954035
+Old/new determinant efficiency: 0.56976403276803

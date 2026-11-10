@@ -1,0 +1,7 @@
+Source: https://github.com/chikuang/gtDesign
+Revision: 81341810777b8941aff5dd2937f5dbcb10feedb3
+Retrieved: 2026-11-10
+Package: gtDesign 0.1.1
+License: GPL-3
+R/, man/, DESCRIPTION and NAMESPACE are copied without modification.
+The original inst/ directories are preserved at the repository root.

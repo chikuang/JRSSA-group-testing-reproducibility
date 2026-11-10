@@ -1,0 +1,201 @@
+"label","k","expected_tests"
+"True theta",1,11023
+"True theta",2,6602.39
+"True theta",3,5475.2227
+"True theta",4,5142.337111
+"True theta",5,5108.37351323
+"True theta",6,5208.7873673039
+"True theta",7,5373.86225159263
+"True theta",8,5569.72189398115
+"True theta",9,5780.34136140247
+"True theta",10,5992.55746610429
+"True theta",11,6204.07844347699
+"True theta",12,6408.4929524336
+"True theta",13,6605.27844576325
+"True theta",14,6792.80895455982
+"True theta",15,6970.36232774064
+"True theta",16,7138.12696479879
+"True theta",17,7297.20807726288
+"True theta",18,7445.63351185448
+"True theta",19,7585.35916602466
+"True theta",20,7715.27402440294
+"Bad 2: mild p0 only",1,11290
+"Bad 2: mild p0 only",2,7091
+"Bad 2: mild p0 only",3,6145.9
+"Bad 2: mild p0 only",4,5960.71
+"Bad 2: mild p0 only",5,6044.639
+"Bad 2: mild p0 only",6,6237.1751
+"Bad 2: mild p0 only",7,6472.15759
+"Bad 2: mild p0 only",8,6718.841831
+"Bad 2: mild p0 only",9,6963.9576479
+"Bad 2: mild p0 only",10,7196.76188311
+"Bad 2: mild p0 only",11,7417.085694799
+"Bad 2: mild p0 only",12,7620.3771253191
+"Bad 2: mild p0 only",13,7807.73941278719
+"Bad 2: mild p0 only",14,7978.96547150847
+"Bad 2: mild p0 only",15,8134.56892435762
+"Bad 2: mild p0 only",16,8275.81203192186
+"Bad 2: mild p0 only",17,8404.73082872967
+"Bad 2: mild p0 only",18,8520.15774585671
+"Bad 2: mild p0 only",19,8624.74197127104
+"Bad 2: mild p0 only",20,8717.96777414393
+"Bad 5: moderate joint",1,11684
+"Bad 5: moderate joint",2,7549.92
+"Bad 5: moderate joint",3,6645.9296
+"Bad 5: moderate joint",4,6482.498048
+"Bad 5: moderate joint",5,6572.59828224
+"Bad 5: moderate joint",6,6758.8864883712
+"Bad 5: moderate joint",7,6977.86010976666
+"Bad 5: moderate joint",8,7200.99689659466
+"Bad 5: moderate joint",9,7416.8772690033
+"Bad 5: moderate joint",10,7616.2919967229
+"Bad 5: moderate joint",11,7800.33695711615
+"Bad 5: moderate joint",12,7965.49652226221
+"Bad 5: moderate joint",13,8113.71693959075
+"Bad 5: moderate joint",14,8245.47090683986
+"Bad 5: moderate joint",15,8361.81439801908
+"Bad 5: moderate joint",16,8464.43667025679
+"Bad 5: moderate joint",17,8555.70426982597
+"Bad 5: moderate joint",18,8634.69975744686
+"Bad 5: moderate joint",19,8704.25578655323
+"Bad 5: moderate joint",20,8763.98509216685
+"Bad 9: severe joint",1,12155
+"Bad 9: severe joint",2,8136.75
+"Bad 9: severe joint",3,7305.2375
+"Bad 9: severe joint",4,7180.551875
+"Bad 9: severe joint",5,7283.46909375
+"Bad 9: severe joint",6,7462.9487296875
+"Bad 9: severe joint",7,7660.55642023438
+"Bad 9: severe joint",8,7851.82295719922
+"Bad 9: severe joint",9,8028.54951361934
+"Bad 9: severe joint",10,8184.06708657644
+"Bad 9: severe joint",11,8321.45702358997
+"Bad 9: severe joint",12,8438.73847005147
+"Bad 9: severe joint",13,8539.02769954375
+"Bad 9: severe joint",14,8623.67354461219
+"Bad 9: severe joint",15,8694.37251292036
+"Bad 9: severe joint",16,8753.26663598231
+"Bad 9: severe joint",17,8803.02664058496
+"Bad 9: severe joint",18,8842.92264449722
+"Bad 9: severe joint",19,8875.88424782263
+"Bad 9: severe joint",20,8901.55161064924
+"Bad 10: high Sp",1,11390
+"Bad 10: high Sp",2,7486.5
+"Bad 10: high Sp",3,6752.525
+"Bad 10: high Sp",4,6710.74625
+"Bad 10: high Sp",5,6884.1343125
+"Bad 10: high Sp",6,7123.514165625
+"Bad 10: high Sp",7,7372.03704078125
+"Bad 10: high Sp",8,7606.58148466406
+"Bad 10: high Sp",9,7820.09426196445
+"Bad 10: high Sp",10,8006.88012266979
+"Bad 10: high Sp",11,8170.84810426932
+"Bad 10: high Sp",12,8310.72088862892
+"Bad 10: high Sp",13,8430.21275533458
+"Bad 10: high Sp",14,8531.1808420344
+"Bad 10: high Sp",15,8615.75371572924
+"Bad 10: high Sp",16,8686.44065836985
+"Bad 10: high Sp",17,8746.22455961437
+"Bad 10: high Sp",18,8794.64087567222
+"Bad 10: high Sp",19,8834.84474432138
+"Bad 10: high Sp",20,8866.66803267318
+"Bad 13: p0 far too low",1,10578
+"Bad 13: p0 far too low",2,5752.44
+"Bad 13: p0 far too low",3,4257.3912
+"Bad 13: p0 far too low",4,3590.923376
+"Bad 13: p0 far too low",5,3255.10490848
+"Bad 13: p0 far too low",6,3083.0028103104
+"Bad 13: p0 far too low",7,3002.68275410419
+"Bad 13: p0 far too low",8,2978.20909902211
+"Bad 13: p0 far too low",9,2991.64491704167
+"Bad 13: p0 far too low",10,3028.05201870083
+"Bad 13: p0 far too low",11,3083.49097832682
+"Bad 13: p0 far too low",12,3150.02115876028
+"Bad 13: p0 far too low",13,3225.70073558508
+"Bad 13: p0 far too low",14,3307.58672087337
+"Bad 13: p0 far too low",15,3393.73498645591
+"Bad 13: p0 far too low",16,3483.20028672679
+"Bad 13: p0 far too low",17,3576.03628099225
+"Bad 13: p0 far too low",18,3669.29555537241
+"Bad 13: p0 far too low",19,3764.02964426496
+"Bad 13: p0 far too low",20,3858.28905137966
+"Bad 14: p0 very high",1,12180
+"Bad 14: p0 very high",2,8604
+"Bad 14: p0 very high",3,8077.2
+"Bad 14: p0 very high",4,8154.56
+"Bad 14: p0 very high",5,8383.648
+"Bad 14: p0 very high",6,8633.9184
+"Bad 14: p0 very high",7,8862.53472
+"Bad 14: p0 very high",8,9056.827776
+"Bad 14: p0 very high",9,9217.4622208
+"Bad 14: p0 very high",10,9344.36977664
+"Bad 14: p0 very high",11,9445.495821312
+"Bad 14: p0 very high",12,9522.3966570496
+"Bad 14: p0 very high",13,9580.71732563968
+"Bad 14: p0 very high",14,9623.57386051174
+"Bad 14: p0 very high",15,9653.8590884094
+"Bad 14: p0 very high",16,9674.48727072752
+"Bad 14: p0 very high",17,9688.58981658201
+"Bad 14: p0 very high",18,9695.67185326561
+"Bad 14: p0 very high",19,9698.73748261249
+"Bad 14: p0 very high",20,9697.38998608999
+"Bad 20: low p0 high Se/Sp",1,10388
+"Bad 20: low p0 high Se/Sp",2,5667.36
+"Bad 20: low p0 high Se/Sp",3,4272.3392
+"Bad 20: low p0 high Se/Sp",4,3701.189024
+"Bad 20: low p0 high Se/Sp",5,3456.15335328
+"Bad 20: low p0 high Se/Sp",6,3370.4687526816
+"Bad 20: low p0 high Se/Sp",7,3372.36469010115
+"Bad 20: low p0 high Se/Sp",8,3426.06374939812
+"Bad 20: low p0 high Se/Sp",9,3513.78183691617
+"Bad 20: low p0 high Se/Sp",10,3620.72838180869
+"Bad 20: low p0 high Se/Sp",11,3743.10653035443
+"Bad 20: low p0 high Se/Sp",12,3873.1133344438
+"Bad 20: low p0 high Se/Sp",13,4008.93993441048
+"Bad 20: low p0 high Se/Sp",14,4147.77173637817
+"Bad 20: low p0 high Se/Sp",15,4287.78858428683
+"Bad 20: low p0 high Se/Sp",16,4428.16492675822
+"Bad 20: low p0 high Se/Sp",17,4569.06997895547
+"Bad 20: low p0 high Se/Sp",18,4707.66787958681
+"Bad 20: low p0 high Se/Sp",19,4845.1178431992
+"Bad 20: low p0 high Se/Sp",20,4979.57430790323
+"Bad 22: low p0 low Se/Sp",1,11410
+"Bad 22: low p0 low Se/Sp",2,6613.7
+"Bad 22: low p0 low Se/Sp",3,5145.289
+"Bad 22: low p0 low Se/Sp",4,4502.95033
+"Bad 22: low p0 low Se/Sp",5,4188.8618201
+"Bad 22: low p0 low Se/Sp",6,4036.195965497
+"Bad 22: low p0 low Se/Sp",7,3973.12008653209
+"Bad 22: low p0 low Se/Sp",8,3963.79648393613
+"Bad 22: low p0 low Se/Sp",9,3990.38258941804
+"Bad 22: low p0 low Se/Sp",10,4038.0311117355
+"Bad 22: low p0 low Se/Sp",11,4102.89017838344
+"Bad 22: low p0 low Se/Sp",12,4177.10347303194
+"Bad 22: low p0 low Se/Sp",13,4258.81036884098
+"Bad 22: low p0 low Se/Sp",14,4345.14605777575
+"Bad 22: low p0 low Se/Sp",15,4434.24167604248
+"Bad 22: low p0 low Se/Sp",16,4525.2244257612
+"Bad 22: low p0 low Se/Sp",17,4618.21769298837
+"Bad 22: low p0 low Se/Sp",18,4710.34116219871
+"Bad 22: low p0 low Se/Sp",19,4802.71092733275
+"Bad 22: low p0 low Se/Sp",20,4893.43959951277
+"Bad 23: high p0 high Se/Sp",1,11828
+"Bad 23: high p0 high Se/Sp",2,8244.96
+"Bad 23: high p0 high Se/Sp",3,7740.8672
+"Bad 23: high p0 high Se/Sp",4,7859.631104
+"Bad 23: high p0 high Se/Sp",5,8140.89750528
+"Bad 23: high p0 high Se/Sp",6,8448.5359543296
+"Bad 23: high p0 high Se/Sp",7,8735.85948255027
+"Bad 23: high p0 high Se/Sp",8,8987.62477569122
+"Bad 23: high p0 high Se/Sp",9,9202.8523160668
+"Bad 23: high p0 high Se/Sp",10,9380.49889917478
+"Bad 23: high p0 high Se/Sp",11,9528.00909732332
+"Bad 23: high p0 high Se/Sp",12,9646.76745980512
+"Bad 23: high p0 high Se/Sp",13,9742.4693170402
+"Bad 23: high p0 high Se/Sp",14,9818.42483997296
+"Bad 23: high p0 high Se/Sp",15,9877.80836877783
+"Bad 23: high p0 high Se/Sp",16,9923.86286239782
+"Bad 23: high p0 high Se/Sp",17,9960.06754716621
+"Bad 23: high p0 high Se/Sp",18,9986.27538867629
+"Bad 23: high p0 high Se/Sp",19,10005.8258187146
+"Bad 23: high p0 high Se/Sp",20,10018.6371713459

@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Please cite this repository and the associated group-testing paper."
+title: "JRSSA group-testing reproducibility"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Yeh
+    given-names: Chi-Kuang
+    orcid: "https://orcid.org/0000-0001-7057-2096"
+  - family-names: Wong
+    given-names: Weng Kee
+  - family-names: Zhou
+    given-names: Julie
+repository-code: "https://github.com/chikuang/JRSSA-group-testing-reproducibility"
+license: GPL-3.0-only

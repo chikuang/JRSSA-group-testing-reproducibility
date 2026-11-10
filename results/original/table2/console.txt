@@ -1,0 +1,72 @@
+[1] "=== Table 2: maximin (D, A), M = 150, q = 0 ==="
+[1] "Reference losses (D, A):"
+$D
+[1] 0.3618444
+
+$A
+[1] 9.190592
+
+[1] "Design:"
+# A tibble: 3 × 2
+  point weight
+  <int>  <dbl>
+1     1  0.217
+2     7  0.242
+3    61  0.541
+[1] "Efficiencies:"
+        D         A 
+0.9150678 0.9150687 
+[1] "tstar = 1.09281472470581"
+[1] "Numerical check (eff balance & 1/t*): TRUE"
+[1] ""
+[1] "=== Table 2: maximin (D, A, Ds), M = 150, q = 0 ==="
+[1] "Reference losses (D, A, Ds):"
+$D
+[1] 0.3618444
+
+$A
+[1] 9.190592
+
+$Ds
+[1] 0.4092857
+
+[1] "Design:"
+# A tibble: 4 × 2
+  point weight
+  <int>  <dbl>
+1     1  0.123
+2     7  0.157
+3     8  0.217
+4    61  0.502
+[1] "Efficiencies:"
+        D         A        Ds 
+0.8555574 0.8555573 0.8555574 
+[1] "tstar = 1.16882875703668"
+[1] "1/t* vs min efficiency: 0.855557320933215 0.855557317550901"
+[1] ""
+[1] "=== Maximin (D, A, c, E), M = 150, q = 0 ==="
+[1] "Reference losses (D, A, c, E); note E is -lambda_min(M) from calc_Eopt:"
+$D
+[1] 0.3618444
+
+$A
+[1] 9.190592
+
+$c
+[1] 5.695995
+
+$E
+[1] -0.1512691
+
+[1] "Design:"
+# A tibble: 3 × 2
+  point weight
+  <int>  <dbl>
+1     1  0.198
+2     8  0.156
+3    61  0.646
+[1] "Efficiencies:"
+    D     A     c     E 
+0.814 0.966 0.814 0.874 
+[1] "tstar = 1.229"
+[1] "1/t* vs min efficiency: 0.814 0.814"

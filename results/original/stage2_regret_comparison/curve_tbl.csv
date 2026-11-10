@@ -1,0 +1,481 @@
+"label","k","expected_tests"
+"True theta",1,11023
+"True theta",2,6602.39
+"True theta",3,5475.2227
+"True theta",4,5142.337111
+"True theta",5,5108.37351323
+"True theta",6,5208.7873673039
+"True theta",7,5373.86225159263
+"True theta",8,5569.72189398115
+"True theta",9,5780.34136140247
+"True theta",10,5992.55746610429
+"True theta",11,6204.07844347699
+"True theta",12,6408.4929524336
+"True theta",13,6605.27844576325
+"True theta",14,6792.80895455982
+"True theta",15,6970.36232774064
+"True theta",16,7138.12696479879
+"True theta",17,7297.20807726288
+"True theta",18,7445.63351185448
+"True theta",19,7585.35916602466
+"True theta",20,7715.27402440294
+"Bad 1: mild joint",1,11365
+"Bad 1: mild joint",2,7061.15
+"Bad 1: mild joint",3,6028.6465
+"Bad 1: mild joint",4,5771.128315
+"Bad 1: mild joint",5,5795.72676665
+"Bad 1: mild joint",6,5940.1113576515
+"Bad 1: mild joint",7,6136.53133546286
+"Bad 1: mild joint",8,6352.85351527121
+"Bad 1: mild joint",9,6574.5966988968
+"Bad 1: mild joint",10,6789.96299599608
+"Bad 1: mild joint",11,6997.86632635644
+"Bad 1: mild joint",12,7192.95835698436
+"Bad 1: mild joint",13,7375.65210485577
+"Bad 1: mild joint",14,7545.14341541875
+"Bad 1: mild joint",15,7701.43050803106
+"Bad 1: mild joint",16,7845.33176230826
+"Bad 1: mild joint",17,7978.50190370052
+"Bad 1: mild joint",18,8099.44673236747
+"Bad 1: mild joint",19,8210.5365264544
+"Bad 1: mild joint",20,8311.01823907351
+"Bad 2: mild p0 only",1,11290
+"Bad 2: mild p0 only",2,7091
+"Bad 2: mild p0 only",3,6145.9
+"Bad 2: mild p0 only",4,5960.71
+"Bad 2: mild p0 only",5,6044.639
+"Bad 2: mild p0 only",6,6237.1751
+"Bad 2: mild p0 only",7,6472.15759
+"Bad 2: mild p0 only",8,6718.841831
+"Bad 2: mild p0 only",9,6963.9576479
+"Bad 2: mild p0 only",10,7196.76188311
+"Bad 2: mild p0 only",11,7417.085694799
+"Bad 2: mild p0 only",12,7620.3771253191
+"Bad 2: mild p0 only",13,7807.73941278719
+"Bad 2: mild p0 only",14,7978.96547150847
+"Bad 2: mild p0 only",15,8134.56892435762
+"Bad 2: mild p0 only",16,8275.81203192186
+"Bad 2: mild p0 only",17,8404.73082872967
+"Bad 2: mild p0 only",18,8520.15774585671
+"Bad 2: mild p0 only",19,8624.74197127104
+"Bad 2: mild p0 only",20,8717.96777414393
+"Bad 3: mild p1 only",1,10995
+"Bad 3: mild p1 only",2,6548.35
+"Bad 3: mild p1 only",3,5396.9655
+"Bad 3: mild p1 only",4,5041.557915
+"Bad 3: mild p1 only",5,4986.64886095
+"Bad 3: mild p1 only",6,5067.5834406835
+"Bad 3: mild p1 only",7,5214.54259983566
+"Bad 3: mild p1 only",8,5393.55461784716
+"Bad 3: mild p1 only",9,5588.50579459786
+"Bad 3: mild p1 only",10,5786.15038897601
+"Bad 3: mild p1 only",11,5984.11986174769
+"Bad 3: mild p1 only",12,6175.93147142535
+"Bad 3: mild p1 only",13,6360.99626842558
+"Bad 3: mild p1 only",14,6537.62652963579
+"Bad 3: mild p1 only",15,6705.04267256128
+"Bad 3: mild p1 only",16,6863.37968548199
+"Bad 3: mild p1 only",17,7013.69310749825
+"Bad 3: mild p1 only",18,7153.96458997338
+"Bad 3: mild p1 only",19,7286.10706867524
+"Bad 3: mild p1 only",20,7408.96957386797
+"Bad 4: mild p2 only",1,11395
+"Bad 4: mild p2 only",2,6948.35
+"Bad 4: mild p2 only",3,5796.9655
+"Bad 4: mild p2 only",4,5441.557915
+"Bad 4: mild p2 only",5,5386.64886095
+"Bad 4: mild p2 only",6,5467.5834406835
+"Bad 4: mild p2 only",7,5614.54259983566
+"Bad 4: mild p2 only",8,5793.55461784716
+"Bad 4: mild p2 only",9,5988.50579459786
+"Bad 4: mild p2 only",10,6186.15038897601
+"Bad 4: mild p2 only",11,6384.11986174769
+"Bad 4: mild p2 only",12,6575.93147142535
+"Bad 4: mild p2 only",13,6760.99626842558
+"Bad 4: mild p2 only",14,6937.62652963579
+"Bad 4: mild p2 only",15,7105.04267256128
+"Bad 4: mild p2 only",16,7263.37968548199
+"Bad 4: mild p2 only",17,7413.69310749825
+"Bad 4: mild p2 only",18,7553.96458997338
+"Bad 4: mild p2 only",19,7686.10706867524
+"Bad 4: mild p2 only",20,7808.96957386797
+"Bad 5: moderate joint",1,11684
+"Bad 5: moderate joint",2,7549.92
+"Bad 5: moderate joint",3,6645.9296
+"Bad 5: moderate joint",4,6482.498048
+"Bad 5: moderate joint",5,6572.59828224
+"Bad 5: moderate joint",6,6758.8864883712
+"Bad 5: moderate joint",7,6977.86010976666
+"Bad 5: moderate joint",8,7200.99689659466
+"Bad 5: moderate joint",9,7416.8772690033
+"Bad 5: moderate joint",10,7616.2919967229
+"Bad 5: moderate joint",11,7800.33695711615
+"Bad 5: moderate joint",12,7965.49652226221
+"Bad 5: moderate joint",13,8113.71693959075
+"Bad 5: moderate joint",14,8245.47090683986
+"Bad 5: moderate joint",15,8361.81439801908
+"Bad 5: moderate joint",16,8464.43667025679
+"Bad 5: moderate joint",17,8555.70426982597
+"Bad 5: moderate joint",18,8634.69975744686
+"Bad 5: moderate joint",19,8704.25578655323
+"Bad 5: moderate joint",20,8763.98509216685
+"Bad 6: moderate p0 high",1,11735
+"Bad 6: moderate p0 high",2,7869.75
+"Bad 6: moderate p0 high",3,7168.2875
+"Bad 6: moderate p0 high",4,7154.144375
+"Bad 6: moderate p0 high",5,7351.02271875
+"Bad 6: moderate p0 high",6,7610.3693109375
+"Bad 6: moderate p0 high",7,7875.86391429688
+"Bad 6: moderate p0 high",8,8124.83432715234
+"Bad 6: moderate p0 high",9,8350.60917807949
+"Bad 6: moderate p0 high",10,8547.81780136757
+"Bad 6: moderate p0 high",11,8720.64513116243
+"Bad 6: moderate p0 high",12,8868.04836148807
+"Bad 6: moderate p0 high",13,8993.94110726486
+"Bad 6: moderate p0 high",14,9100.34994117513
+"Bad 6: moderate p0 high",15,9189.54744999886
+"Bad 6: moderate p0 high",16,9264.16533249903
+"Bad 6: moderate p0 high",17,9327.29053262418
+"Bad 6: moderate p0 high",18,9378.54695273055
+"Bad 6: moderate p0 high",19,9421.16490982097
+"Bad 6: moderate p0 high",20,9455.04017334782
+"Bad 7: moderate p1 low",1,10967
+"Bad 7: moderate p1 low",2,6494.31
+"Bad 7: moderate p1 low",3,5318.7083
+"Bad 7: moderate p1 low",4,4940.778719
+"Bad 7: moderate p1 low",5,4864.92420867
+"Bad 7: moderate p1 low",6,4926.3795140631
+"Bad 7: moderate p1 low",7,5055.22294807868
+"Bad 7: moderate p1 low",8,5217.38734171318
+"Bad 7: moderate p1 low",9,5396.67022779326
+"Bad 7: moderate p1 low",10,5579.74331184773
+"Bad 7: moderate p1 low",11,5764.16128001839
+"Bad 7: moderate p1 low",12,5943.3699904171
+"Bad 7: moderate p1 low",13,6116.7140910879
+"Bad 7: moderate p1 low",14,6282.44410471175
+"Bad 7: moderate p1 low",15,6439.72301738193
+"Bad 7: moderate p1 low",16,6588.63240616519
+"Bad 7: moderate p1 low",17,6730.17813773363
+"Bad 7: moderate p1 low",18,6862.29566809228
+"Bad 7: moderate p1 low",19,6986.85497132582
+"Bad 7: moderate p1 low",20,7102.66512333301
+"Bad 8: moderate p2 low",1,11767
+"Bad 8: moderate p2 low",2,7294.31
+"Bad 8: moderate p2 low",3,6118.7083
+"Bad 8: moderate p2 low",4,5740.778719
+"Bad 8: moderate p2 low",5,5664.92420867
+"Bad 8: moderate p2 low",6,5726.3795140631
+"Bad 8: moderate p2 low",7,5855.22294807869
+"Bad 8: moderate p2 low",8,6017.38734171318
+"Bad 8: moderate p2 low",9,6196.67022779326
+"Bad 8: moderate p2 low",10,6379.74331184773
+"Bad 8: moderate p2 low",11,6564.16128001839
+"Bad 8: moderate p2 low",12,6743.3699904171
+"Bad 8: moderate p2 low",13,6916.7140910879
+"Bad 8: moderate p2 low",14,7082.44410471175
+"Bad 8: moderate p2 low",15,7239.72301738193
+"Bad 8: moderate p2 low",16,7388.63240616519
+"Bad 8: moderate p2 low",17,7530.17813773363
+"Bad 8: moderate p2 low",18,7662.29566809228
+"Bad 8: moderate p2 low",19,7786.85497132582
+"Bad 8: moderate p2 low",20,7902.66512333301
+"Bad 9: severe joint",1,12155
+"Bad 9: severe joint",2,8136.75
+"Bad 9: severe joint",3,7305.2375
+"Bad 9: severe joint",4,7180.551875
+"Bad 9: severe joint",5,7283.46909375
+"Bad 9: severe joint",6,7462.9487296875
+"Bad 9: severe joint",7,7660.55642023438
+"Bad 9: severe joint",8,7851.82295719922
+"Bad 9: severe joint",9,8028.54951361934
+"Bad 9: severe joint",10,8184.06708657644
+"Bad 9: severe joint",11,8321.45702358997
+"Bad 9: severe joint",12,8438.73847005147
+"Bad 9: severe joint",13,8539.02769954375
+"Bad 9: severe joint",14,8623.67354461219
+"Bad 9: severe joint",15,8694.37251292036
+"Bad 9: severe joint",16,8753.26663598231
+"Bad 9: severe joint",17,8803.02664058496
+"Bad 9: severe joint",18,8842.92264449722
+"Bad 9: severe joint",19,8875.88424782263
+"Bad 9: severe joint",20,8901.55161064924
+"Bad 10: high Sp",1,11390
+"Bad 10: high Sp",2,7486.5
+"Bad 10: high Sp",3,6752.525
+"Bad 10: high Sp",4,6710.74625
+"Bad 10: high Sp",5,6884.1343125
+"Bad 10: high Sp",6,7123.514165625
+"Bad 10: high Sp",7,7372.03704078125
+"Bad 10: high Sp",8,7606.58148466406
+"Bad 10: high Sp",9,7820.09426196445
+"Bad 10: high Sp",10,8006.88012266979
+"Bad 10: high Sp",11,8170.84810426932
+"Bad 10: high Sp",12,8310.72088862892
+"Bad 10: high Sp",13,8430.21275533458
+"Bad 10: high Sp",14,8531.1808420344
+"Bad 10: high Sp",15,8615.75371572924
+"Bad 10: high Sp",16,8686.44065836985
+"Bad 10: high Sp",17,8746.22455961437
+"Bad 10: high Sp",18,8794.64087567222
+"Bad 10: high Sp",19,8834.84474432138
+"Bad 10: high Sp",20,8866.66803267318
+"Bad 11: low Se/Sp",1,12150
+"Bad 11: low Se/Sp",2,7735
+"Bad 11: low Se/Sp",3,6595.5
+"Bad 11: low Se/Sp",4,6235.35
+"Bad 11: low Se/Sp",5,6161.815
+"Bad 11: low Se/Sp",6,6212.6335
+"Bad 11: low Se/Sp",7,6320.07015
+"Bad 11: low Se/Sp",8,6451.963135
+"Bad 11: low Se/Sp",9,6593.7668215
+"Bad 11: low Se/Sp",10,6733.59013935
+"Bad 11: low Se/Sp",11,6870.231125415
+"Bad 11: low Se/Sp",12,6998.2080128735
+"Bad 11: low Se/Sp",13,7117.78721158615
+"Bad 11: low Se/Sp",14,7228.00849042754
+"Bad 11: low Se/Sp",15,7328.70764138478
+"Bad 11: low Se/Sp",16,7420.5368772463
+"Bad 11: low Se/Sp",17,7504.98318952167
+"Bad 11: low Se/Sp",18,7580.3848705695
+"Bad 11: low Se/Sp",19,7648.94638351256
+"Bad 11: low Se/Sp",20,7709.7517451613
+"Bad 12: p0 too low",1,10756
+"Bad 12: p0 too low",2,6097.76
+"Bad 12: p0 too low",3,4759.8496
+"Bad 12: p0 too low",4,4240.815616
+"Bad 12: p0 too low",5,4043.18299136
+"Bad 12: p0 too low",6,4000.4556717056
+"Bad 12: p0 too low",7,4041.11744483738
+"Bad 12: p0 too low",8,4129.63274704388
+"Bad 12: p0 too low",9,4248.44743716213
+"Bad 12: p0 too low",10,4382.98953967564
+"Bad 12: p0 too low",11,4529.66995808862
+"Bad 12: p0 too low",12,4680.88315976507
+"Bad 12: p0 too low",13,4835.00783337447
+"Bad 12: p0 too low",14,4989.40752003949
+"Bad 12: p0 too low",15,5142.43121923791
+"Bad 12: p0 too low",16,5293.4139704684
+"Bad 12: p0 too low",17,5442.67741164966
+"Bad 12: p0 too low",18,5587.53031518367
+"Bad 12: p0 too low",19,5729.26910257633
+"Bad 12: p0 too low",20,5866.17833847327
+"Bad 13: p0 far too low",1,10578
+"Bad 13: p0 far too low",2,5752.44
+"Bad 13: p0 far too low",3,4257.3912
+"Bad 13: p0 far too low",4,3590.923376
+"Bad 13: p0 far too low",5,3255.10490848
+"Bad 13: p0 far too low",6,3083.0028103104
+"Bad 13: p0 far too low",7,3002.68275410419
+"Bad 13: p0 far too low",8,2978.20909902211
+"Bad 13: p0 far too low",9,2991.64491704167
+"Bad 13: p0 far too low",10,3028.05201870083
+"Bad 13: p0 far too low",11,3083.49097832682
+"Bad 13: p0 far too low",12,3150.02115876028
+"Bad 13: p0 far too low",13,3225.70073558508
+"Bad 13: p0 far too low",14,3307.58672087337
+"Bad 13: p0 far too low",15,3393.73498645591
+"Bad 13: p0 far too low",16,3483.20028672679
+"Bad 13: p0 far too low",17,3576.03628099225
+"Bad 13: p0 far too low",18,3669.29555537241
+"Bad 13: p0 far too low",19,3764.02964426496
+"Bad 13: p0 far too low",20,3858.28905137966
+"Bad 14: p0 very high",1,12180
+"Bad 14: p0 very high",2,8604
+"Bad 14: p0 very high",3,8077.2
+"Bad 14: p0 very high",4,8154.56
+"Bad 14: p0 very high",5,8383.648
+"Bad 14: p0 very high",6,8633.9184
+"Bad 14: p0 very high",7,8862.53472
+"Bad 14: p0 very high",8,9056.827776
+"Bad 14: p0 very high",9,9217.4622208
+"Bad 14: p0 very high",10,9344.36977664
+"Bad 14: p0 very high",11,9445.495821312
+"Bad 14: p0 very high",12,9522.3966570496
+"Bad 14: p0 very high",13,9580.71732563968
+"Bad 14: p0 very high",14,9623.57386051174
+"Bad 14: p0 very high",15,9653.8590884094
+"Bad 14: p0 very high",16,9674.48727072752
+"Bad 14: p0 very high",17,9688.58981658201
+"Bad 14: p0 very high",18,9695.67185326561
+"Bad 14: p0 very high",19,9698.73748261249
+"Bad 14: p0 very high",20,9697.38998608999
+"Bad 15: p0 extreme high",1,12625
+"Bad 15: p0 extreme high",2,9293.75
+"Bad 15: p0 extreme high",3,8879.3125
+"Bad 15: p0 extreme high",4,8983.984375
+"Bad 15: p0 extreme high",5,9187.98828125
+"Bad 15: p0 extreme high",6,9382.9912109375
+"Bad 15: p0 extreme high",7,9540.99340820312
+"Bad 15: p0 extreme high",8,9658.99505615234
+"Bad 15: p0 extreme high",9,9743.74629211426
+"Bad 15: p0 extreme high",10,9798.80971908569
+"Bad 15: p0 extreme high",11,9834.10728931427
+"Bad 15: p0 extreme high",12,9852.0804669857
+"Bad 15: p0 extreme high",13,9858.56035023928
+"Bad 15: p0 extreme high",14,9856.42026267946
+"Bad 15: p0 extreme high",15,9848.06519700959
+"Bad 15: p0 extreme high",16,9835.7988977572
+"Bad 15: p0 extreme high",17,9822.0991733179
+"Bad 15: p0 extreme high",18,9805.82437998842
+"Bad 15: p0 extreme high",19,9789.36828499132
+"Bad 15: p0 extreme high",20,9771.77621374349
+"Bad 16: optimistic Se/Sp",1,10772
+"Bad 16: optimistic Se/Sp",2,6396.96
+"Bad 16: optimistic Se/Sp",3,5312.1728
+"Bad 16: optimistic Se/Sp",4,5018.700704
+"Bad 16: optimistic Se/Sp",5,5021.39165472
+"Bad 16: optimistic Se/Sp",6,5155.8942388896
+"Bad 16: optimistic Se/Sp",7,5352.67164216733
+"Bad 16: optimistic Se/Sp",8,5578.01462721562
+"Bad 16: optimistic Se/Sp",9,5816.05360331053
+"Bad 16: optimistic Se/Sp",10,6053.76985107879
+"Bad 16: optimistic Se/Sp",11,6289.00596150327
+"Bad 16: optimistic Se/Sp",12,6515.47554419805
+"Bad 16: optimistic Se/Sp",13,6732.77225610418
+"Bad 16: optimistic Se/Sp",14,6939.37819817689
+"Bad 16: optimistic Se/Sp",15,7134.67172430451
+"Bad 16: optimistic Se/Sp",16,7318.93470360319
+"Bad 16: optimistic Se/Sp",17,7493.35927435097
+"Bad 16: optimistic Se/Sp",18,7656.0541251464
+"Bad 16: optimistic Se/Sp",19,7809.05033638615
+"Bad 16: optimistic Se/Sp",20,7951.30681283912
+"Bad 17: optimistic all",1,10484
+"Bad 17: optimistic all",2,5852.64
+"Bad 17: optimistic all",3,4540.5344
+"Bad 17: optimistic all",4,4046.273024
+"Bad 17: optimistic all",5,3872.42210304
+"Bad 17: optimistic all",6,3852.5252189184
+"Bad 17: optimistic all",7,3915.10421016167
+"Bad 17: optimistic all",8,4024.6600417552
+"Bad 17: optimistic all",9,4163.67364008499
+"Bad 17: optimistic all",10,4317.60669448159
+"Bad 17: optimistic all",11,4482.90242670233
+"Bad 17: optimistic all",12,4651.98632963424
+"Bad 17: optimistic all",13,4823.26687644887
+"Bad 17: optimistic all",14,4994.13620139091
+"Bad 17: optimistic all",15,5162.97075333528
+"Bad 17: optimistic all",16,5329.13192320186
+"Bad 17: optimistic all",17,5492.96664627379
+"Bad 17: optimistic all",18,5651.80798042284
+"Bad 17: optimistic all",19,5806.97566120593
+"Bad 17: optimistic all",20,5956.77663475769
+"Bad 18: pessimistic Se/Sp",1,11955
+"Bad 18: pessimistic Se/Sp",2,7378.15
+"Bad 18: pessimistic Se/Sp",3,6105.6795
+"Bad 18: pessimistic Se/Sp",4,5637.661935
+"Bad 18: pessimistic Se/Sp",5,5478.02559955
+"Bad 18: pessimistic Se/Sp",6,5461.5638075815
+"Bad 18: pessimistic Se/Sp",7,5517.9443410508
+"Bad 18: pessimistic Se/Sp",8,5612.71823717724
+"Bad 18: pessimistic Se/Sp",9,5729.32796057484
+"Bad 18: pessimistic Se/Sp",10,5854.1150033346
+"Bad 18: pessimistic Se/Sp",11,5984.32695310118
+"Bad 18: pessimistic Se/Sp",12,6113.12406638409
+"Bad 18: pessimistic Se/Sp",13,6239.58538173721
+"Bad 18: pessimistic Se/Sp",14,6361.7144050156
+"Bad 18: pessimistic Se/Sp",15,6478.44439666451
+"Bad 18: pessimistic Se/Sp",16,6589.643288898
+"Bad 18: pessimistic Se/Sp",17,6696.11825867514
+"Bad 18: pessimistic Se/Sp",18,6795.61998056788
+"Bad 18: pessimistic Se/Sp",19,6889.84658192813
+"Bad 18: pessimistic Se/Sp",20,6977.44732119316
+"Bad 19: pessimistic all",1,12475
+"Bad 19: pessimistic all",2,8303.75
+"Bad 19: pessimistic all",3,7342.1875
+"Bad 19: pessimistic all",4,7106.959375
+"Bad 19: pessimistic all",5,7115.91546875
+"Bad 19: pessimistic all",6,7215.5281484375
+"Bad 19: pessimistic all",7,7345.24892617188
+"Bad 19: pessimistic all",8,7478.8115872461
+"Bad 19: pessimistic all",9,7606.48984915918
+"Bad 19: pessimistic all",10,7720.3163717853
+"Bad 19: pessimistic all",11,7822.26891601751
+"Bad 19: pessimistic all",12,7909.42857861488
+"Bad 19: pessimistic all",13,7984.11429182265
+"Bad 19: pessimistic all",14,8046.99714804925
+"Bad 19: pessimistic all",15,8099.19757584186
+"Bad 19: pessimistic all",16,8142.36793946558
+"Bad 19: pessimistic all",17,8178.76274854575
+"Bad 19: pessimistic all",18,8207.29833626388
+"Bad 19: pessimistic all",19,8230.6035858243
+"Bad 19: pessimistic all",20,8248.06304795066
+"Bad 20: low p0 high Se/Sp",1,10388
+"Bad 20: low p0 high Se/Sp",2,5667.36
+"Bad 20: low p0 high Se/Sp",3,4272.3392
+"Bad 20: low p0 high Se/Sp",4,3701.189024
+"Bad 20: low p0 high Se/Sp",5,3456.15335328
+"Bad 20: low p0 high Se/Sp",6,3370.4687526816
+"Bad 20: low p0 high Se/Sp",7,3372.36469010115
+"Bad 20: low p0 high Se/Sp",8,3426.06374939812
+"Bad 20: low p0 high Se/Sp",9,3513.78183691617
+"Bad 20: low p0 high Se/Sp",10,3620.72838180869
+"Bad 20: low p0 high Se/Sp",11,3743.10653035443
+"Bad 20: low p0 high Se/Sp",12,3873.1133344438
+"Bad 20: low p0 high Se/Sp",13,4008.93993441048
+"Bad 20: low p0 high Se/Sp",14,4147.77173637817
+"Bad 20: low p0 high Se/Sp",15,4287.78858428683
+"Bad 20: low p0 high Se/Sp",16,4428.16492675822
+"Bad 20: low p0 high Se/Sp",17,4569.06997895547
+"Bad 20: low p0 high Se/Sp",18,4707.66787958681
+"Bad 20: low p0 high Se/Sp",19,4845.1178431992
+"Bad 20: low p0 high Se/Sp",20,4979.57430790323
+"Bad 21: high p0 low Se/Sp",1,12460
+"Bad 21: high p0 low Se/Sp",2,8493.2
+"Bad 21: high p0 low Se/Sp",3,7674.424
+"Bad 21: high p0 low Se/Sp",4,7535.14768
+"Bad 21: high p0 low Se/Sp",5,7604.8210976
+"Bad 21: high p0 low Se/Sp",6,7738.953300032
+"Bad 21: high p0 low Se/Sp",7,7884.00170602624
+"Bad 21: high p0 low Se/Sp",8,8019.10139894152
+"Bad 21: high p0 low Se/Sp",9,8138.66314713204
+"Bad 21: high p0 low Se/Sp",10,8237.86378064827
+"Bad 21: high p0 low Se/Sp",11,8321.04830013158
+"Bad 21: high p0 low Se/Sp",12,8387.0596061079
+"Bad 21: high p0 low Se/Sp",13,8439.50887700848
+"Bad 21: high p0 low Se/Sp",14,8479.99727914695
+"Bad 21: high p0 low Se/Sp",15,8510.2977689005
+"Bad 21: high p0 low Se/Sp",16,8532.50417049841
+"Bad 21: high p0 low Se/Sp",17,8549.1534198087
+"Bad 21: high p0 low Se/Sp",18,8559.32580424313
+"Bad 21: high p0 low Se/Sp",19,8565.72715947937
+"Bad 21: high p0 low Se/Sp",20,8567.75627077308
+"Bad 22: low p0 low Se/Sp",1,11410
+"Bad 22: low p0 low Se/Sp",2,6613.7
+"Bad 22: low p0 low Se/Sp",3,5145.289
+"Bad 22: low p0 low Se/Sp",4,4502.95033
+"Bad 22: low p0 low Se/Sp",5,4188.8618201
+"Bad 22: low p0 low Se/Sp",6,4036.195965497
+"Bad 22: low p0 low Se/Sp",7,3973.12008653209
+"Bad 22: low p0 low Se/Sp",8,3963.79648393613
+"Bad 22: low p0 low Se/Sp",9,3990.38258941804
+"Bad 22: low p0 low Se/Sp",10,4038.0311117355
+"Bad 22: low p0 low Se/Sp",11,4102.89017838344
+"Bad 22: low p0 low Se/Sp",12,4177.10347303194
+"Bad 22: low p0 low Se/Sp",13,4258.81036884098
+"Bad 22: low p0 low Se/Sp",14,4345.14605777575
+"Bad 22: low p0 low Se/Sp",15,4434.24167604248
+"Bad 22: low p0 low Se/Sp",16,4525.2244257612
+"Bad 22: low p0 low Se/Sp",17,4618.21769298837
+"Bad 22: low p0 low Se/Sp",18,4710.34116219871
+"Bad 22: low p0 low Se/Sp",19,4802.71092733275
+"Bad 22: low p0 low Se/Sp",20,4893.43959951277
+"Bad 23: high p0 high Se/Sp",1,11828
+"Bad 23: high p0 high Se/Sp",2,8244.96
+"Bad 23: high p0 high Se/Sp",3,7740.8672
+"Bad 23: high p0 high Se/Sp",4,7859.631104
+"Bad 23: high p0 high Se/Sp",5,8140.89750528
+"Bad 23: high p0 high Se/Sp",6,8448.5359543296
+"Bad 23: high p0 high Se/Sp",7,8735.85948255027
+"Bad 23: high p0 high Se/Sp",8,8987.62477569122
+"Bad 23: high p0 high Se/Sp",9,9202.8523160668
+"Bad 23: high p0 high Se/Sp",10,9380.49889917478
+"Bad 23: high p0 high Se/Sp",11,9528.00909732332
+"Bad 23: high p0 high Se/Sp",12,9646.76745980512
+"Bad 23: high p0 high Se/Sp",13,9742.4693170402
+"Bad 23: high p0 high Se/Sp",14,9818.42483997296
+"Bad 23: high p0 high Se/Sp",15,9877.80836877783
+"Bad 23: high p0 high Se/Sp",16,9923.86286239782
+"Bad 23: high p0 high Se/Sp",17,9960.06754716621
+"Bad 23: high p0 high Se/Sp",18,9986.27538867629
+"Bad 23: high p0 high Se/Sp",19,10005.8258187146
+"Bad 23: high p0 high Se/Sp",20,10018.6371713459

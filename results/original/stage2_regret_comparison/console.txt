@@ -1,0 +1,73 @@
+# A tibble: 20 × 2
+       k expected_tests
+   <int>          <dbl>
+ 1     5          5108.
+ 2     4          5142.
+ 3     6          5209.
+ 4     7          5374.
+ 5     3          5475.
+ 6     8          5570.
+ 7     9          5780.
+ 8    10          5993.
+ 9    11          6204.
+10    12          6408.
+11     2          6602.
+12    13          6605.
+13    14          6793.
+14    15          6970.
+15    16          7138.
+16    17          7297.
+17    18          7446.
+18    19          7585.
+19    20          7715.
+20     1         11023 
+Oracle k = 5 
+Oracle expected tests = 5108.374 
+# A tibble: 24 × 12
+   label                         p0    p1    p2 k_chosen expected_tests_under_…¹
+   <fct>                      <dbl> <dbl> <dbl>    <int>                   <dbl>
+ 1 True theta                  0.07  0.93  0.96        5                   5108.
+ 2 Bad 1: mild joint           0.09  0.91  0.94        4                   5771.
+ 3 Bad 2: mild p0 only         0.1   0.93  0.96        4                   5961.
+ 4 Bad 3: mild p1 only         0.07  0.89  0.96        5                   4987.
+ 5 Bad 4: mild p2 only         0.07  0.93  0.92        5                   5387.
+ 6 Bad 5: moderate joint       0.12  0.89  0.93        4                   6482.
+ 7 Bad 6: moderate p0 high     0.15  0.93  0.96        4                   7154.
+ 8 Bad 7: moderate p1 low      0.07  0.85  0.96        5                   4865.
+ 9 Bad 8: moderate p2 low      0.07  0.93  0.88        5                   5665.
+10 Bad 9: severe joint         0.15  0.87  0.9         4                   7181.
+11 Bad 10: high Sp             0.15  0.87  0.99        4                   6711.
+12 Bad 11: low Se/Sp           0.1   0.8   0.85        5                   6162.
+13 Bad 12: p0 too low          0.04  0.93  0.96        6                   4000.
+14 Bad 13: p0 far too low      0.02  0.93  0.96        8                   2978.
+15 Bad 14: p0 very high        0.2   0.93  0.96        3                   8077.
+16 Bad 15: p0 extreme high     0.25  0.93  0.96        3                   8879.
+17 Bad 16: optimistic Se/Sp    0.07  0.97  0.99        4                   5019.
+18 Bad 17: optimistic all      0.04  0.97  0.99        6                   3853.
+19 Bad 18: pessimistic Se/Sp   0.07  0.8   0.85        6                   5462.
+20 Bad 19: pessimistic all     0.15  0.8   0.85        4                   7107.
+21 Bad 20: low p0 high Se/Sp   0.03  0.97  0.99        6                   3370.
+22 Bad 21: high p0 low Se/Sp   0.18  0.82  0.88        4                   7535.
+23 Bad 22: low p0 low Se/Sp    0.03  0.82  0.88        8                   3964.
+24 Bad 23: high p0 high Se/Sp  0.18  0.97  0.99        3                   7741.
+# ℹ abbreviated name: ¹​expected_tests_under_used_theta
+# ℹ 6 more variables: actual_expected_tests_under_true <dbl>, oracle_k <int>,
+#   oracle_expected_tests_under_true <dbl>, regret <dbl>,
+#   pct_increase_vs_oracle <dbl>, type <chr>
+# A tibble: 480 × 3
+   label          k expected_tests
+   <fct>      <int>          <dbl>
+ 1 True theta     1         11023 
+ 2 True theta     2          6602.
+ 3 True theta     3          5475.
+ 4 True theta     4          5142.
+ 5 True theta     5          5108.
+ 6 True theta     6          5209.
+ 7 True theta     7          5374.
+ 8 True theta     8          5570.
+ 9 True theta     9          5780.
+10 True theta    10          5993.
+# ℹ 470 more rows
+NOTE: preserved source refers to undefined regret_group_tbl in its trailing plot.
+The complete scenario calculations and preceding plots were reproduced.
+Use R/revision_checks.R for the reproducible scenario/regret figures.
