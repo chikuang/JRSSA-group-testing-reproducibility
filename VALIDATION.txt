@@ -15,3 +15,30 @@ Validation completed 2026-11-10
 - Positive finite-sample bias example checked by exact binomial summation.
 - Same-budget three-size/four-size information comparison recalculated in R.
 - Dependency versions and session information are supplied.
+
+Package-based execution and paper index checked 2026-11-11
+
+- Rscript reproduce.R all reached all 33 indexed items, running each distinct
+  calculation once and using the saved 10000-replicate cells for simulation
+  displays. The two non-numerical LaTeX items are explicitly identified.
+- After conditioning the Main Table 2 c-optimal problem and its contrast,
+  Rscript reproduce.R main-table-02 passed with all five statuses optimal.
+  A and E specificity efficiencies differ in the third printed decimal;
+  separate full-precision values and the manuscript grouping are documented.
+- The Main Table 6, Main Table 7 and Supplementary Table S3 grids contain
+  30, 18 and 16 solutions respectively; all solver statuses are optimal.
+- Supplementary Tables S4 and S6 have 24 and 15 budget-feasible integer designs.
+  Alternative supports/counts and verification-only tables are labelled.
+- Model probability and gradient checks cover 36 interior parameter settings
+  and pool sizes 1:150; the likelihood also retains the accuracy=0.5 boundary.
+- The package probability function and original RNG streams reproduce all
+  120000 saved outcome vectors exactly. Refitting the first two samples in each
+  of 12 cells reproduces saved likelihood values within 1e-7.
+- A separate 20-replicate-per-cell smoke run completed all 240 joint MLE fits
+  in results/checks/smoke, without overwriting the published simulation.
+- No full 120000-fit Monte Carlo rerun was needed for this refactor.
+- Independent normalized derivatives agree with the package directional
+  derivatives within 1e-6 in the revised rounding comparisons.
+- All 17 original inst/ files still match upstream_manifest.csv; the vendored
+  package and published Monte Carlo estimates/summaries remain unchanged.
+- Main Figure 4 and Supplementary Figure S1 were rendered and visually checked.

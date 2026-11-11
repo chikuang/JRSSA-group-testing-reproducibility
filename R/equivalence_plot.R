@@ -1,0 +1,10 @@
+# Supplementary Figure S1: D-A equivalence plot, M=61 and q=0.8.
+source("R/load_gtdesign.R");load_gtdesign()
+dir.create("figures",showWarnings=FALSE)
+dir.create("results/paper",recursive=TRUE,showWarnings=FALSE)
+f<-gtDesign::gt_huang2020_regressor(c(.07,.93,.96),.8)
+pdf("figures/supp_figure_S01.pdf",width=10,height=4)
+out<-gtDesign::maximin_design_workflow(1:61,f,criteria=c("D","A"),make_figure=TRUE)
+dev.off()
+saveRDS(out,"results/paper/supp_figure_S01_checks.rds")
+capture.output(sessionInfo(),file="results/paper/supp_figure_S01_sessionInfo.txt")

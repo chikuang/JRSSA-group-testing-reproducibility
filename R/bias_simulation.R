@@ -1,6 +1,12 @@
 # Joint prevalence/sensitivity/specificity Monte Carlo study.
-# Usage: Rscript simulation.R /path/to/gtDesign /path/to/output [replicates=5000] [cores=4]
-# Design construction uses the author's R source; estimation below uses base R.
+# Reproduces Main Table 10; Supplementary Tables S10-S13 and Figures S5-S6.
+# Usage: Rscript R/bias_simulation.R vendor/gtDesign results/bias 10000 4
+# Design construction uses gtDesign. The package has no joint MLE routine.
+# The vectorized likelihood and gradient below include accuracy = 0.5, which
+# gtDesign's model-input validation excludes; they are checked against the
+# package on the interior parameter space by scripts/check_package_use.R.
+# Custom rounding retains the published fully-spent integer comparison.
+# Output-to-paper mapping: PAPER_REPRODUCTION.md and paper_items.csv.
 args <- commandArgs(TRUE)
 if(length(args)<2) stop('Supply gtDesign source directory and output directory')
 src <- normalizePath(args[1]); out <- args[2]; dir.create(out,recursive=TRUE,showWarnings=FALSE)
@@ -8,7 +14,8 @@ B <- if(length(args)>2) as.integer(args[3]) else 5000L
 cores <- if(length(args)>3) as.integer(args[4]) else 4L
 if(.Platform$OS.type=="windows") cores<-1L
 stopifnot(B>=2,cores>=1)
-for(file in list.files(file.path(src,'R'),full.names=TRUE,pattern='[.]R$')) source(file)
+source("R/load_gtdesign.R")
+load_gtdesign(src)
 options(digits=12)
 prob <- function(x,theta) theta[2]-(theta[2]+theta[3]-1)*exp(x*log1p(-theta[1]))
 jac <- function(x,theta) {
@@ -106,9 +113,9 @@ contexts <- list(cost=list(theta=c(.07,.93,.96),M=61,q=.2,budgets=c(100,500,2000
 cells<-list();designs<-list();certs<-list()
 for(ctx in names(contexts)) {
  cc<-contexts[[ctx]]; u<-seq_len(cc$M)
- FF<-t(vapply(u,gt_huang2020_regressor(cc$theta,cc$q),numeric(3)))
+ FF<-t(vapply(u,gtDesign::gt_huang2020_regressor(cc$theta,cc$q),numeric(3)))
  transform<-solve(chol(crossprod(FF))); FFw<-FF%*%transform
- a<-calc_Dopt(u,function(x)as.numeric(FFw[x,]),ridge=0,drop_tol=0,
+ a<-gtDesign::calc_Dopt(u,function(x)as.numeric(FFw[x,]),ridge=0,drop_tol=0,
              tol_gap_abs=1e-10,tol_gap_rel=1e-10,tol_feas=1e-10)
  w<-a$weights;w[w<1e-5]<-0;w<-w/sum(w); ix<-which(w>0)
  stopifnot(length(ix)==3)
@@ -139,7 +146,7 @@ if(length(cells)>1) for(k in 2:length(cells))seeds[[k]]<-parallel::nextRNGStream
 results<-list(); audits<-list()
 for(k in seq_along(cells)) {
  cc<-cells[[k]]; assign('.Random.seed',seeds[[k]],envir=.GlobalEnv)
- yy<-sapply(seq_along(cc$x),function(j)rbinom(B,cc$n[j],prob(cc$x[j],cc$theta)))
+ yy<-sapply(seq_along(cc$x),function(j)rbinom(B,cc$n[j],gtDesign::gt_huang2020_pi(cc$x[j],cc$theta)))
  tm<-proc.time()[3]
  ans<-parallel::mclapply(seq_len(B),function(i)fit_mle(yy[i,],cc$n,cc$x),mc.cores=cores,mc.set.seed=FALSE)
  est<-do.call(rbind,ans)

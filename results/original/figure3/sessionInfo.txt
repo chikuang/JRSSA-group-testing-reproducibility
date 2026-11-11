@@ -15,6 +15,9 @@ tzcode source: internal
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
+other attached packages:
+[1] gtDesign_0.1.1
+
 loaded via a namespace (and not attached):
  [1] vctrs_0.7.3        cli_3.6.6          rlang_1.3.0        clarabel_0.11.3   
  [5] highs_1.14.0-2     generics_0.1.4     textshaping_1.0.5  scs_3.2.7         

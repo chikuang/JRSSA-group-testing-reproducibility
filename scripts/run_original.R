@@ -1,9 +1,12 @@
-# Run one preserved source script in an isolated R process.
+# Run one preserved source script using the installed gtDesign package.
+# Original filenames use older numbering; see PAPER_REPRODUCTION.md for current
+# Table/Figure numbers and whether this script covers the whole item or a subset.
 args<-commandArgs(TRUE)
 if(length(args)!=1)stop("Usage: Rscript scripts/run_original.R inst/paper_reproduce/table1.R")
 file<-normalizePath(args[1]); root<-normalizePath(".")
 .libPaths(c(file.path(root,".library"),.libPaths()))
-for(f in list.files("vendor/gtDesign/R",full.names=TRUE,pattern="[.]R$"))source(f)
+source("R/load_gtdesign.R")
+load_gtdesign()
 name<-tools::file_path_sans_ext(basename(file));dest<-file.path(root,"results/original",name)
 dir.create(dest,recursive=TRUE,showWarnings=FALSE)
 setwd(dest)
@@ -28,3 +31,7 @@ for(nm in ls(env)){
 }
 capture.output(sessionInfo(),file="sessionInfo.txt")
 sink();dev.off()
+# A table-only script leaves an empty PDF device; do not retain a zero-page PDF.
+pdf_bytes<-readBin("plots.pdf","raw",n=file.info("plots.pdf")$size)
+pdf_text<-paste(rawToChar(pdf_bytes,multiple=TRUE),collapse="")
+if(grepl("/Type /Pages /Kids [ ] /Count 0",pdf_text,fixed=TRUE,useBytes=TRUE))unlink("plots.pdf")

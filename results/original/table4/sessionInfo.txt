@@ -15,6 +15,9 @@ tzcode source: internal
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
+other attached packages:
+[1] gtDesign_0.1.1
+
 loaded via a namespace (and not attached):
  [1] backports_1.5.1 Matrix_1.7-6    lattice_0.23-1  osqp_1.0.0     
  [5] magrittr_2.0.5  glue_1.8.1      tibble_3.3.1    pkgconfig_2.0.3

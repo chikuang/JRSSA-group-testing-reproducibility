@@ -1,3 +1,4 @@
+# Supplementary Section S13.3: likelihood diagnostics underlying Table S13.
 # Independent likelihood audit: profile prevalence, solve convex accuracy subproblem.
 args<-commandArgs(TRUE);e<-new.env(parent=globalenv())
 for(expr in parse('R/bias_simulation.R')){

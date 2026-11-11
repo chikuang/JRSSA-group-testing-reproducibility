@@ -1,3 +1,5 @@
+# Main Table 1 and Supplementary Section S13.1-S13.2.
+# Outputs nonidentifiability_example.csv, jensen_bias.csv, three_size_comparison.csv.
 args<-commandArgs(TRUE)
 # Load the exact definitions used by the simulation, without running its loop.
 e<-new.env(parent=globalenv())
@@ -30,16 +32,18 @@ with(e,{
 })
 # Same assay budget, contrasting structural identification and information.
 with(e,{
- sets<-list(close=c(1,2,3),spread=c(1,7,15),four=c(1,6,10,15));th<-c(.022,.92,.965)
+ sets<-list(one=10,two=c(1,15),close=c(1,2,3),spread=c(1,7,15),four=c(1,6,10,15));th<-c(.022,.92,.965)
  ans<-lapply(names(sets),function(nm){
-  x<-sets[[nm]];n<-if(length(x)==3)c(167,167,166)else rep(125,4)
-  J<-fisher(x,n,th);V<-solve(J)
+  x<-sets[[nm]];n<-switch(as.character(length(x)),`1`=500,`2`=c(250,250),
+    `3`=c(167,167,166),`4`=rep(125,4))
+  J<-fisher(x,n,th);rank<-qr(jac(x,th))$rank
+  V<-if(rank==3)solve(J)else matrix(NA_real_,3,3)
   data.frame(design=nm,pool_sizes=paste(x,collapse=';'),counts=paste(n,collapse=';'),
    assays=sum(n),rank=qr(jac(x,th))$rank,SE_p=sqrt(V[1,1]),
    SE_sensitivity=sqrt(V[2,2]),SE_specificity=sqrt(V[3,3]),
-   logdet=as.numeric(determinant(J,TRUE)$modulus))
+   logdet=if(rank==3)as.numeric(determinant(J,TRUE)$modulus)else -Inf)
  })
  ans<-do.call(rbind,ans);ans$relative_D_efficiency<-exp((ans$logdet-ans$logdet[ans$design=='spread'])/3)
- stopifnot(all(ans$rank==3),all(ans$assays==500))
+ stopifnot(identical(as.integer(ans$rank),c(1L,2L,3L,3L,3L)),all(ans$assays==500))
  write.csv(ans,file.path(out,'three_size_comparison.csv'),row.names=FALSE)
 })

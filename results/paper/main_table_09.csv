@@ -1,0 +1,6 @@
+"k_chosen","regret","pct_increase_vs_oracle","actual_expected_tests_under_true","pattern"
+5,0,0,5108.37351323,"True parameter values or near truth"
+4,33.9635977699991,0.664861284752138,5142.337111,"Mild misspecification"
+6,100.413854073901,1.96567173120452,5208.7873673039,"Moderate underestimation"
+3,366.849186769999,7.1813305315265,5475.2227,"Strong overestimation"
+8,461.348380751144,9.03121863654475,5569.72189398115,"Severe underestimation"

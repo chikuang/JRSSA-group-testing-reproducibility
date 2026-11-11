@@ -1,13 +1,15 @@
-# Revision checks: source the pinned chikuang/gtDesign R files supplied as argv[1].
-# No installed package or GitHub repository is modified.
+# Main Tables 5 and 8; Supplementary Tables S7 and S9, Figures S2-S4.
+# Also checks the displayed Main Table 3 D allocation (not its construction).
+# Uses the installed gtDesign package; see PAPER_REPRODUCTION.md for coverage.
 args <- commandArgs(TRUE)
 if (!length(args) %in% c(2L,3L)) stop('Usage: Rscript revision_checks.R /path/to/pinned/gtDesign /path/to/results [/path/to/figures]')
 src <- normalizePath(args[1]); out <- normalizePath(args[2])
 fig_out <- if (length(args) == 3L) normalizePath(args[3]) else out
-for (file in list.files(file.path(src, 'R'), full.names=TRUE, pattern='[.]R$')) source(file)
+source("R/load_gtdesign.R")
+load_gtdesign(src)
 options(digits=12)
 theta <- c(.07,.93,.96); u <- 1:61; q <- .2
-f <- gt_huang2020_regressor(theta,q)
+f <- gtDesign::gt_huang2020_regressor(theta,q)
 F <- t(vapply(u,f,numeric(3)))
 cost <- 1-q+q*u
 fim <- function(n,C) crossprod(F, F*as.numeric(n*cost/C))
@@ -17,14 +19,19 @@ fmt <- function(n) paste(paste0(u[n>0],':',n[n>0]),collapse=';')
 res <- list(); cert <- list(); weights <- list()
 for(k in c('D','A','Ds','E')) {
   cat('Solving',k,'\n')
-  a <- switch(k,D=calc_Dopt(u,f,ridge=0,drop_tol=0),A=calc_Aopt(u,f,drop_tol=0),
-              Ds=calc_copt(u,f,cVec=c(1,0,0),drop_tol=0),E=calc_Eopt(u,f,drop_tol=0))
+  a <- switch(k,D=gtDesign::calc_Dopt(u,f,ridge=0,drop_tol=0),A=gtDesign::calc_Aopt(u,f,drop_tol=0),
+              Ds=gtDesign::calc_copt(u,f,cVec=c(1,0,0),drop_tol=0),E=gtDesign::calc_Eopt(u,f,drop_tol=0))
   wfull <- a$weights
   w <- wfull; w[w<1e-6] <- 0; w <- w/sum(w)
   I <- crossprod(F,F*w); V <- solve(I)
   G <- switch(k,D=V/3,A=V%*%V,Ds=tcrossprod(V[,1]),E={
     eg<-eigen(I,symmetric=TRUE); tcrossprod(eg$vectors[,3])/eg$values[3]^2})
   score <- rowSums((F%*%G)*F); avg <- sum(diag(G%*%I))
+  dd <- gtDesign::calc_directional_derivatives(u,I,f,criteria=if(k=="Ds")"c"else k,
+    cVec=if(k=="Ds")c(1,0,0)else NULL,use_ginv=FALSE)
+  dd <- dd[[switch(k,D="dD",A="dA",Ds="dc",E="dE")]]
+  scale <- switch(k,D=3,A=avg,Ds=avg,E=min(eigen(I,symmetric=TRUE)$values))
+  stopifnot(max(abs(dd/scale-(score/avg-1))) < 1e-6)
   cert[[k]] <- data.frame(criterion=k,solver_status=a$status,
     discarded_mass=sum(wfull[wfull<1e-6]),max_relative_violation=max(score/avg)-1)
   weights[[k]] <- data.frame(criterion=k,pool=u,weight=w,full_weight=wfull)
@@ -37,7 +44,7 @@ for(k in c('D','A','Ds','E')) {
       j<-eligible[which.max(C*w[eligible]-ns[eligible]*cost[eligible])]
       ns[j]<-ns[j]+1
     }
-    r<-round_gt_design_budget(a,u,theta,C,q,k,opts=list(cVec_Ds=c(1,0,0)),
+    r<-gtDesign::round_gt_design_budget(a,u,theta,C,q,k,opts=list(cVec_Ds=c(1,0,0)),
                              fix_zero_floor=FALSE,n_index=2)
     nl<-numeric(length(u)); nl[r$design_exact[1,]]<-r$design_exact[2,]
     stopifnot(sum(ns*cost)<=C+1e-8,sum(nl*cost)<=C+1e-8,
@@ -62,7 +69,7 @@ for(p in c(.001,.022,.07,.3)) for(x in 1:150) {
   stopifnot(abs(r-pbinom(1,x,p,lower.tail=FALSE))<1e-12)
 }
 # A direct comparison of the two displayed feasible specimen allocations.
-u<-1:15; theta<-c(.022,.92,.965); f<-gt_huang2020_regressor(theta,0)
+u<-1:15; theta<-c(.022,.92,.965); f<-gtDesign::gt_huang2020_regressor(theta,0)
 F<-t(vapply(u,f,numeric(3)))
 nold<-numeric(15); nold[c(1,7,8,15)]<-c(288,288,1,288)
 nnew<-numeric(15); nnew[c(1,4,5,15)]<-c(2209,212,274,147)
@@ -76,11 +83,11 @@ capture.output(sessionInfo(),file=file.path(out,'R_sessionInfo.txt'))
 print(do.call(rbind,res)); print(do.call(rbind,cert))
 
 # Independent coordinate benchmarks and a conditioned D solve for the specimen cap.
-f <- gt_huang2020_regressor(theta,1)
+f <- gtDesign::gt_huang2020_regressor(theta,1)
 Fc <- t(vapply(u,f,numeric(3)))
 B <- solve(chol(crossprod(Fc))); FF <- Fc %*% B
 fw <- function(x) as.numeric(FF[x,])
-a <- calc_Dopt(u,fw,drop_tol=0,ridge=0)
+a <- gtDesign::calc_Dopt(u,fw,drop_tol=0,ridge=0)
 I <- crossprod(FF,FF*a$weights); V <- solve(I)
 Ie <- crossprod(FF,FF*(u*nnew/6632))
 spec_eff <- exp((determinant(Ie,TRUE)$modulus-determinant(I,TRUE)$modulus)/3)

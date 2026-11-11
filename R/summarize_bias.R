@@ -1,3 +1,5 @@
+# Main Table 10; Supplementary Tables S10-S13 and Figures S5-S6.
+# Uses saved simulation results; does not rerun or change the estimator.
 # Build the publication tables and scientific figures from the saved R results.
 d<-read.csv('results/bias/summary.csv');a<-read.csv('results/bias/allocations.csv')
 z<-read.csv('results/bias/diagnostics.csv');rep<-read.csv('results/bias/replicates.csv')

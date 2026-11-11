@@ -16,3 +16,4 @@ renv/staging/
 .env.*
 *.Rcheck/
 *.synctex.gz
+results/checks/
