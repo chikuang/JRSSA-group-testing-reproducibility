@@ -8,11 +8,9 @@ Run `Rscript reproduce.R list` to list the 33 items, or e.g.
 `Rscript reproduce.R main-table-06` to execute one item's command. Install the
 archived package first with `Rscript scripts/install_dependencies.R`.
 
-**Coverage matters:** “Computed” means the indicated numerical calculation is run
+**Coverage matters:** Main Tables 3–4 now have complete package-based construction; their counts are not inputs. “Computed” means the indicated numerical calculation is run
 at the stated inputs, not that every historical support weight, integer tie or
-machine timing is bit-for-bit identical. “Verification” treats printed allocations
-as inputs and checks them; it does not reconstruct them by optimization.
-“From saved simulation” rebuilds the display from the supplied 10000-replicate
+machine timing is bit-for-bit identical. “From saved simulation” rebuilds the display from the supplied 10000-replicate
 results. `Rscript run.R bias 10000 4` regenerates those simulations. Schematics and
 literature summaries are authored in LaTeX and do not have R calculations.
 
@@ -25,6 +23,9 @@ columns; `R/low_prevalence_tables.R` supplies these for current Table 2. Origina
 `table6.R` is a legacy assay-optimal-to-specimen rescaling and is **not** the
 current specimen-constrained Table 3 calculation. Original `table7.R` and
 `table8.R` both calculate assay-constrained allocations related to current Table 4.
+The historical audit reproduces all ten criterion rows of the original application tables
+using the documented E solver precision and D tie rule; see
+[APPLICATION_REPRODUCTION_AUDIT.md](APPLICATION_REPRODUCTION_AUDIT.md).
 
 ## Main text
 
@@ -32,8 +33,8 @@ current specimen-constrained Table 3 calculation. Original `table7.R` and
 |---|---|---|---|---|
 | Main Table 1 | `tab:identification-comparison` | `R/validate_theory.R` | `results/bias/three_size_comparison.csv` | Computed |
 | Main Table 2 | `tbl:app-approximate` | `R/low_prevalence_tables.R` | `results/paper/main_table_02.csv` | Computed |
-| Main Table 3 | `tbl:app-exact-individual` | `R/low_prevalence_tables.R` | `results/paper/main_table_03_verification.csv` | Verification |
-| Main Table 4 | `tbl:app-num_tests` | `R/low_prevalence_tables.R`; `inst/paper_reproduce/table7.R` | `results/paper/main_table_04_verification.csv; results/original/table7/table7.csv` | Verification |
+| Main Table 3 | `tbl:app-exact-individual` | `R/application_exact_tables.R` | `results/paper/main_table_03.csv` | Computed |
+| Main Table 4 | `tbl:app-num_tests` | `R/application_exact_tables.R` | `results/paper/main_table_04.csv` | Computed |
 | Main Table 5 | `tab:analytic-bounds` | `R/revision_checks.R` | `results/revision/analytic_checks.txt` | Computed |
 | Main Table 6 | `tbl:1-2` | `R/paper_designs.R` | `results/paper/main-table-06/` | Computed |
 | Main Table 7 | `tbl:multiobj_maximin_time` | `R/paper_designs.R` | `results/paper/main-table-07/` | Computed |
@@ -88,18 +89,18 @@ Rscript R/low_prevalence_tables.R
 
 ### Main Table 3 — `main-table-03`
 
-Checks all displayed specimen allocations and information. Counts are manuscript inputs, not reconstructed optima. Original table6.R solves an older rescaling problem.
+Computes all five criteria with gtDesign at q=1 and 6632 specimens, then applies package budget rounding. No printed counts are inputs.
 
 ```sh
-Rscript R/low_prevalence_tables.R
+Rscript R/application_exact_tables.R
 ```
 
 ### Main Table 4 — `main-table-04`
 
-Checks displayed counts. table7.R recomputes alternatives; its D tie uses 3840 specimens and its E allocation can include size 6, unlike the printed allocation.
+Computes all five criteria with gtDesign at q=0 and 500 assays, then applies package rounding. D ties use the fewest specimens; E uses tighter solver precision. No printed counts are inputs.
 
 ```sh
-Rscript R/low_prevalence_tables.R
+Rscript R/application_exact_tables.R
 ```
 
 ### Main Table 5 — `main-table-05`

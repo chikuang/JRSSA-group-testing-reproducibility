@@ -8,7 +8,7 @@ This repository preserves the complete original `inst/` tree from [chikuang/gtDe
 10 main tables, 4 main figures, 13 supplementary tables and 6 supplementary figures
 to their code, output files and coverage, using the 11 November 2026 manuscript.
 [paper_items.csv](paper_items.csv) provides the same mapping with stable LaTeX labels.
-The index distinguishes computed results, checks of printed allocations, summaries
+The index distinguishes computed results, summaries
 of saved simulations, and non-numerical LaTeX material.
 Run `Rscript scripts/install_dependencies.R` once before the following commands.
 
@@ -60,7 +60,9 @@ original seeds. The simulation estimator and its published results are unchanged
 | `R/revision_checks.R` | Revised rounding, precision bounds, specimen-budget and Stage II checks. |
 | `R/summarize_bias.R` | Figures and LaTeX tables generated from the saved R results. |
 | `R/paper_designs.R` | All settings for current Main Tables 6–7 and Supplementary Table S3. |
-| `R/low_prevalence_tables.R` | Main Table 2; checks of the displayed Main Tables 3–4. |
+| `R/low_prevalence_tables.R` | Main Table 2 and coordinate efficiencies. |
+| `R/application_exact_tables.R` | Constructs all five criteria for Main Tables 3–4 with gtDesign; saves weights, rounding candidates, diagnostics and D ties. |
+| `R/audit_original_application.R` | Audits the original application tables against the preserved manuscript. |
 | `R/supp_rounding.R` | Package rounding calculations for Supplementary Tables S4 and S6. |
 | `R/stage2_outputs.R` | Main Table 9 and Figure 4; Supplementary Table S7. |
 | `R/equivalence_plot.R` | Supplementary Figure S1 using the package plotting workflow. |
@@ -90,7 +92,7 @@ Rscript run.R revision
 # Original table/figure scripts and the R example.
 Rscript run.R original
 
-# All analyses.
+# Run the bias, revision-check and original-script workflows above.
 Rscript run.R all 10000 4
 ```
 
@@ -139,14 +141,20 @@ Every file in the original `inst/` tree is preserved unchanged. Two distinctions
 1. The trailing `p_regret_grouped` plot in the original Stage II script uses an undefined `regret_group_tbl`. The runner reproduces the complete scenario calculations and preceding plots, records this limitation, and stops before that incomplete plot. `R/revision_checks.R` regenerates the supplementary scenario figures. `R/stage2_outputs.R` supplies the grouped Main Figure 4 and Table 9 using the package probability function.
 2. Original `table6.R` rescales an assay-optimised allocation to a specimen cap. The revised checks assess the specimen-specific optimisation problem. Original output is retained as provenance, not represented as the corrected result.
 
-Historical integer allocations are sensitive to tie-breaking and solver precision.
-For example, original `table7.R` can return a D-optimal allocation using 3,840
-specimens rather than the equally efficient printed 3,826-specimen allocation,
-and its E allocation can include a small count at size 6. Main Tables 3–4 are
-therefore explicitly marked as **verification of displayed allocations** in the
-index. Recomputed alternatives are retained, not silently substituted into the
-manuscript. Timings in newly generated files describe the current run, not the
-historical computation times printed in the paper.
+Main Tables 3–4 are now reconstructed from model inputs using gtDesign, including
+approximate optimization, integer rounding and criterion efficiencies. All counts
+match the current manuscript. They no longer use printed allocations as inputs.
+Run `Rscript reproduce.R main-table-03` or `main-table-04`.
+
+The [application audit](APPLICATION_REPRODUCTION_AUDIT.md) also confirms the
+original scripts against the original application tables. Seven of ten criterion rows match
+at the current solver defaults; all ten match after tightening E precision and
+selecting the minimum-specimen D tie, which matches the manuscript. The original source files
+are unchanged. The revised Table 3 optimizes information per specimen (q=1),
+whereas the original `table6.R` first optimized per assay (q=0) and then imposed a
+specimen cap. This change in the optimization problem explains its larger
+allocation difference; it is not evidence that the original script failed to
+reproduce the old manuscript. Newly recorded timings describe the current run.
 
 Main Table 2 combines A and E in one row because their support weights round to
 the same three decimals. Their specificity efficiencies differ slightly: the

@@ -42,3 +42,21 @@ Package-based execution and paper index checked 2026-11-11
 - All 17 original inst/ files still match upstream_manifest.csv; the vendored
   package and published Monte Carlo estimates/summaries remain unchanged.
 - Main Figure 4 and Supplementary Figure S1 were rendered and visually checked.
+
+Full application-table reconstruction and historical audit, 2026-11-11
+
+- R/application_exact_tables.R constructs all five criteria for current Main
+  Tables 3-4 from model inputs using installed gtDesign. No manuscript counts
+  are used as optimization inputs. All ten generated allocations match the text.
+- All ten optimizer statuses are optimal. Maximum full-candidate normalized
+  directional residual is 5.744e-6. All budgets are exactly spent and information
+  matrices have rank three. Efficiencies exceed 0.99999.
+- Package efficiency calculations agree with direct criterion ratios within 1e-8.
+- Original table6.R and table7.R match 7/10 original criterion rows at current
+  defaults; all 10/10 match after tightening E precision and selecting the
+  minimum-specimen D tie. Full numerical traces are saved.
+- All 13 original R entry scripts executed again. The known incomplete trailing
+  Stage II plot remains documented and is supplied by the replacement script.
+- Original inst/ files and the vendored gtDesign source remain unchanged.
+- The previous verification-only implementation for Tables 3-4 is superseded;
+  it has been removed from the current entry points and index.

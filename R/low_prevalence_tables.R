@@ -1,6 +1,5 @@
 # Main Table 2: compute designs and coordinate efficiencies using gtDesign.
-# Main Tables 3-4: VERIFY the displayed counts, resources and information.
-# The latter two tables are inputs to the verification, not regenerated counts.
+# Main Tables 3-4 are constructed in R/application_exact_tables.R.
 source("R/load_gtdesign.R");load_gtdesign()
 dir.create("results/paper",recursive=TRUE,showWarnings=FALSE)
 theta<-c(.022,.92,.965);u<-1:15
@@ -31,24 +30,5 @@ stopifnot(all(vapply(fits,function(a)a$status=="optimal",logical(1))))
 write.csv(do.call(rbind,rows),"results/paper/main_table_02.csv",row.names=FALSE)
 write.csv(data.frame(parameter=c("prevalence","sensitivity","specificity"),variance=bench),
  "results/paper/main_table_02_coordinate_benchmarks.csv",row.names=FALSE)
-displayed<-list(
- `03`=list(D=rbind(c(1,4,5,15),c(2209,212,274,147)),
-   A=rbind(c(1,4,15),c(870,818,166)),E=rbind(c(1,4,15),c(870,818,166)),
-   c=rbind(c(1,4,15),c(859,817,167)),Ds=rbind(c(1,4,15),c(937,850,153))),
- `04`=list(D=rbind(c(1,7,15),c(167,167,166)),
-   A=rbind(c(1,7,15),c(80,258,162)),E=rbind(c(1,7,15),c(80,258,162)),
-   c=rbind(c(1,7,15),c(78,259,163)),Ds=rbind(c(1,7,15),c(86,263,151))))
-for(id in names(displayed)){
- rows<-lapply(names(displayed[[id]]),function(k){
-  a<-displayed[[id]][[k]];x<-a[1,];n<-a[2,];H<-t(vapply(x,f,numeric(3)))
-  J<-crossprod(H,H*n)
-  stopifnot(if(id=="03")sum(x*n)==6632 else sum(n)==500,qr(J)$rank==3)
-  data.frame(criterion=k,counts=paste(paste0(x,":",n),collapse=";"),
-   assays=sum(n),specimens=sum(x*n),rank=qr(J)$rank,
-   SE_prevalence=sqrt(solve(J)[1,1]),SE_sensitivity=sqrt(solve(J)[2,2]),
-   SE_specificity=sqrt(solve(J)[3,3]))
- })
- write.csv(do.call(rbind,rows),paste0("results/paper/main_table_",id,"_verification.csv"),row.names=FALSE)
-}
 capture.output(sessionInfo(),file="results/paper/low_prevalence_sessionInfo.txt")
-cat("Recomputed Main Table 2; verified displayed Main Tables 3-4.\n")
+cat("Recomputed Main Table 2.\n")

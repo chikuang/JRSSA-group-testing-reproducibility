@@ -1,0 +1,11 @@
+"table","criterion","q","solver_status","max_relative_violation"
+"Main Table 3","D",1,"optimal",4.40899937448336e-07
+"Main Table 3","A",1,"optimal",6.29102502314183e-07
+"Main Table 3","E",1,"optimal",2.30216647545411e-06
+"Main Table 3","c",1,"optimal",1.45597004097553e-06
+"Main Table 3","Ds",1,"optimal",5.7434281572899e-06
+"Main Table 4","D",0,"optimal",9.36467223766613e-08
+"Main Table 4","A",0,"optimal",6.46990687247495e-07
+"Main Table 4","E",0,"optimal",3.08202215149045e-06
+"Main Table 4","c",0,"optimal",1.38405987648582e-06
+"Main Table 4","Ds",0,"optimal",1.01530910345815e-06
